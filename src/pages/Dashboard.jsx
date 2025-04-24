@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Dashboard/Header";
 import Categories from "../components/Dashboard/categories/Categories.jsx";
 import Addtasks from "../components/Dashboard/tasks/Addtasks.jsx";
-import Tasks from "../components/Dashboard/tasks/tasks.jsx";
+import Tasks from "../components/Dashboard/tasks/Tasks.jsx";
 //Todo está bien en local
 const Dashboard = () => {
    return (
