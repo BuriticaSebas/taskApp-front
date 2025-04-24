@@ -5,7 +5,7 @@ const createCategoriesA = createAsyncThunk("Categories/createCategories", async 
   try {
     const token = localStorage.getItem('token'); 
     const response = await axios.post(
-      'http://localhost:4000/api/category',
+      'https://tasksapp-jala-back.onrender.com/api/category',
       { name, userId },
       {
         headers: {
@@ -25,7 +25,7 @@ const updateCategoriesA = createAsyncThunk("Categories/updateCategories", async 
    try {
     const token = localStorage.getItem('token'); 
     const response = await axios.put(
-        `http://localhost:4000/api/category/${idCategory}`,{name:newName
+        `https://tasksapp-jala-back.onrender.com/api/category/${idCategory}`,{name:newName
         },
         {
           headers: {
@@ -46,7 +46,7 @@ const deleteCategoriesA = createAsyncThunk("Categories/deleteCategories", async 
     const token = localStorage.getItem('token'); 
 
   const response = await axios.delete(
-    `http://localhost:4000/api/category/${id}`,
+    `https://tasksapp-jala-back.onrender.com/api/category/${id}`,
     {
       headers: {
         Authorization: `Bearer ${token}`

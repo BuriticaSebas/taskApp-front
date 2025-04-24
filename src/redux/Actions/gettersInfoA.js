@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getTasks = createAsyncThunk('getter/getTasks', async ()=>{
     const token = localStorage.getItem('token'); 
-    const response = await axios.get('http://localhost:4000/api/tasks', {
+    const response = await axios.get('https://tasksapp-jala-back.onrender.com/api/tasks', {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -17,7 +17,7 @@ const getCategories = createAsyncThunk('getter/getCategories', async ()=>{
 
 
     const token = localStorage.getItem('token'); 
-    const response = await axios.get('http://localhost:4000/api/category', {
+    const response = await axios.get('https://tasksapp-jala-back.onrender.com/api/category', {
       headers: {
         Authorization: `Bearer ${token}`
       }

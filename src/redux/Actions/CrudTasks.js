@@ -5,7 +5,7 @@ const createTaskA = createAsyncThunk("tasks/createtask", async ({title, priority
     try {
       const token = localStorage.getItem('token'); 
     const response = await axios.post(
-        'http://localhost:4000/api/tasks',
+        'https://tasksapp-jala-back.onrender.com/api/tasks',
 
         {
         title,
@@ -28,7 +28,7 @@ const updateTaskA = createAsyncThunk("tasks/updatetask", async ({id,data})=>{
    try {
     const token = localStorage.getItem('token'); 
     const response = await axios.put(
-        `http://localhost:4000/api/tasks/${id}`,data,
+        `https://tasksapp-jala-back.onrender.com/api/tasks/${id}`,data,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -47,7 +47,7 @@ const deletetaskA = createAsyncThunk("tasks/deletetask", async (id) => {
   const token = localStorage.getItem('token'); 
 
   const response = await axios.delete(
-    `http://localhost:4000/api/tasks/${id}`,
+    `https://tasksapp-jala-back.onrender.com/api/tasks/${id}`,
     {
       headers: {
         Authorization: `Bearer ${token}`

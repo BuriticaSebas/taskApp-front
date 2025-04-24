@@ -20,7 +20,7 @@ const RegisterUser = () => {
   const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("http://localhost:4000/api/register", {
+      const response = await fetch("https://tasksapp-jala-back.onrender.com/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
